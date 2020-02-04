@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController automaticallyAdjustsScrollViewInsets="NO" id="V0i-Qb-E8N" customClass="DocumetnHistoryViewController" customModule="DigitalBank" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="ct5-Cc-Gu7"/>
+                <viewControllerLayoutGuide type="bottom" id="oKS-0R-jqp"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="Zal-da-oYQ" customClass="DocumetnHistoryView" customModule="DigitalBank" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O3-5c-ZqL" customClass="NavBar" customModule="DigitalBank" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="UGR-qf-5Ni"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hideFilterButton" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="ИСТОРИЯ ДОКУМЕНТА"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-nE-vPQ" customClass="ShadedTableView" customModule="DigitalBank" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                        <connections>
+                            <outlet property="dataSource" destination="V0i-Qb-E8N" id="XZG-2H-wBR"/>
+                            <outlet property="delegate" destination="V0i-Qb-E8N" id="3bE-qP-jVl"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="gfD-nE-vPQ" firstAttribute="top" secondItem="1O3-5c-ZqL" secondAttribute="bottom" id="6fo-hx-AeU"/>
+                    <constraint firstItem="1O3-5c-ZqL" firstAttribute="top" secondItem="Zal-da-oYQ" secondAttribute="top" id="95P-qm-pTE"/>
+                    <constraint firstItem="1O3-5c-ZqL" firstAttribute="leading" secondItem="Zal-da-oYQ" secondAttribute="leading" id="T11-p4-utr"/>
+                    <constraint firstItem="gfD-nE-vPQ" firstAttribute="leading" secondItem="Zal-da-oYQ" secondAttribute="leading" id="WgP-hF-hJ8"/>
+                    <constraint firstItem="oKS-0R-jqp" firstAttribute="top" secondItem="gfD-nE-vPQ" secondAttribute="bottom" id="ZXh-bV-1Nb"/>
+                    <constraint firstAttribute="trailing" secondItem="gfD-nE-vPQ" secondAttribute="trailing" id="cZW-zs-115"/>
+                    <constraint firstAttribute="trailing" secondItem="1O3-5c-ZqL" secondAttribute="trailing" id="j7I-au-aSV"/>
+                </constraints>
+                <connections>
+                    <outlet property="navigationBar" destination="1O3-5c-ZqL" id="lgL-SM-Kan"/>
+                    <outlet property="tableView" destination="gfD-nE-vPQ" id="a29-SP-MzX"/>
+                </connections>
+            </view>
+            <point key="canvasLocation" x="168.5" y="181.5"/>
+        </viewController>
+    </objects>
+</document>

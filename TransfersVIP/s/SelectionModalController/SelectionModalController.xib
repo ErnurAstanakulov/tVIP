@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionModalController" customModule="ForteBusiness" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController restorationIdentifier="SelectionModalController" id="2Hi-AZ-TfC" customClass="SelectionModalController" customModule="ForteBusiness" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="KsE-K6-iBD"/>
+                <viewControllerLayoutGuide type="bottom" id="uAC-SM-DZs"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="xk0-5E-6Ih">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhw-YU-ouS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qes-V5-sBk" appends="YES" id="lK4-nY-PyQ"/>
+                        </connections>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-Ez-mgt">
+                        <rect key="frame" x="47" y="69" width="281" height="514"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <connections>
+                            <outlet property="dataSource" destination="2Hi-AZ-TfC" id="rNV-z0-Qtp"/>
+                            <outlet property="delegate" destination="2Hi-AZ-TfC" id="xU5-dJ-zbu"/>
+                        </connections>
+                    </tableView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEn-s8-Ctg">
+                        <rect key="frame" x="47" y="583" width="281" height="31"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                        <state key="normal" title="Применить">
+                            <color key="titleColor" red="0.098039215690000001" green="0.73333333329999995" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="okButtonAction:" destination="2Hi-AZ-TfC" eventType="touchUpInside" id="VnP-LU-iHz"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.30437127976190476" colorSpace="calibratedRGB"/>
+                <gestureRecognizers/>
+                <constraints>
+                    <constraint firstItem="eEn-s8-Ctg" firstAttribute="top" secondItem="Pgg-Ez-mgt" secondAttribute="bottom" id="46G-fj-b3G"/>
+                    <constraint firstItem="Pgg-Ez-mgt" firstAttribute="top" secondItem="KsE-K6-iBD" secondAttribute="bottom" constant="49" id="8di-15-CM1"/>
+                    <constraint firstAttribute="trailing" secondItem="bhw-YU-ouS" secondAttribute="trailing" id="BGT-25-3fW"/>
+                    <constraint firstItem="eEn-s8-Ctg" firstAttribute="leading" secondItem="xk0-5E-6Ih" secondAttribute="leadingMargin" constant="31" id="Npo-04-bq3"/>
+                    <constraint firstItem="Pgg-Ez-mgt" firstAttribute="leading" secondItem="xk0-5E-6Ih" secondAttribute="leadingMargin" constant="31" id="WiY-hZ-slG"/>
+                    <constraint firstItem="bhw-YU-ouS" firstAttribute="top" secondItem="xk0-5E-6Ih" secondAttribute="top" id="bzE-wW-KuO"/>
+                    <constraint firstItem="bhw-YU-ouS" firstAttribute="leading" secondItem="xk0-5E-6Ih" secondAttribute="leading" id="czU-ug-Oak"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Pgg-Ez-mgt" secondAttribute="trailing" constant="31" id="dHF-EG-iz3"/>
+                    <constraint firstItem="uAC-SM-DZs" firstAttribute="top" secondItem="eEn-s8-Ctg" secondAttribute="bottom" constant="53" id="gwH-M8-uRF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eEn-s8-Ctg" secondAttribute="trailing" constant="31" id="oJn-dn-Ex4"/>
+                    <constraint firstItem="uAC-SM-DZs" firstAttribute="top" secondItem="bhw-YU-ouS" secondAttribute="bottom" id="uEF-zN-vOF"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="okButton" destination="eEn-s8-Ctg" id="Q6g-Tt-IsR"/>
+                <outlet property="tableView" destination="Pgg-Ez-mgt" id="gtq-x2-Z6V"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="75.5"/>
+        </viewController>
+        <tapGestureRecognizer id="Qes-V5-sBk">
+            <connections>
+                <action selector="dimissPressed:" destination="2Hi-AZ-TfC" id="sxM-ZS-BsC"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

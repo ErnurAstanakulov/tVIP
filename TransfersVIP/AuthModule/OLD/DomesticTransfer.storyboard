@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Employee Modal Table View Controller-->
+        <scene sceneID="FCp-ro-vDL">
+            <objects>
+                <tableViewController storyboardIdentifier="CreateEmployeeModalTableViewController" id="9jk-B2-L49" customClass="CreateEmployeeModalTableViewController" customModule="ForteBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="tdf-8X-zDS" customClass="ShadedTableView" customModule="ForteBusiness" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="6hc-S6-48L">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5JD-tN-J1i" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5JD-tN-J1i" id="eHI-u3-0mZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWB-XI-tZk" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Фамилия"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="bPq-On-uio"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-Pa-ShK" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kWB-XI-tZk" secondAttribute="trailing" constant="15" id="7w4-Vr-grL"/>
+                                                <constraint firstItem="kWB-XI-tZk" firstAttribute="leading" secondItem="8ED-Pa-ShK" secondAttribute="leading" id="Nv4-HK-aXN"/>
+                                                <constraint firstItem="8ED-Pa-ShK" firstAttribute="top" secondItem="kWB-XI-tZk" secondAttribute="bottom" id="OEK-3E-4xx"/>
+                                                <constraint firstItem="kWB-XI-tZk" firstAttribute="trailing" secondItem="8ED-Pa-ShK" secondAttribute="trailing" id="U6Q-33-Buc"/>
+                                                <constraint firstItem="kWB-XI-tZk" firstAttribute="top" secondItem="eHI-u3-0mZ" secondAttribute="top" constant="15" id="pWi-JQ-hiM"/>
+                                                <constraint firstItem="kWB-XI-tZk" firstAttribute="leading" secondItem="eHI-u3-0mZ" secondAttribute="leading" constant="15" id="qQF-Tb-H2x"/>
+                                                <constraint firstAttribute="bottom" secondItem="8ED-Pa-ShK" secondAttribute="bottom" constant="15" id="wi6-SV-tKI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundedCornersStyle">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZXD-GJ-tl1" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZXD-GJ-tl1" id="9dT-cP-PrV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hup-av-2HH" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Имя"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="ZRp-hs-goS"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-Kw-5y1" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hup-av-2HH" secondAttribute="trailing" constant="15" id="31N-sw-CWM"/>
+                                                <constraint firstItem="hup-av-2HH" firstAttribute="leading" secondItem="Lg7-Kw-5y1" secondAttribute="leading" id="KFU-WX-PKl"/>
+                                                <constraint firstItem="Lg7-Kw-5y1" firstAttribute="top" secondItem="hup-av-2HH" secondAttribute="bottom" id="LpG-5P-MLd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lg7-Kw-5y1" secondAttribute="bottom" constant="15" id="M8M-Oy-XpN"/>
+                                                <constraint firstItem="hup-av-2HH" firstAttribute="leading" secondItem="9dT-cP-PrV" secondAttribute="leading" constant="15" id="PLJ-Qs-LJK"/>
+                                                <constraint firstItem="hup-av-2HH" firstAttribute="trailing" secondItem="Lg7-Kw-5y1" secondAttribute="trailing" id="TPU-CG-xAq"/>
+                                                <constraint firstItem="hup-av-2HH" firstAttribute="top" secondItem="9dT-cP-PrV" secondAttribute="top" constant="15" id="qu7-HC-Rck"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7G7-Nl-79Y" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7G7-Nl-79Y" id="dKb-0G-gf3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2g-Dl-zMy" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Отчество"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="K7B-gn-f9v"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dt-gh-Abb" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T2g-Dl-zMy" firstAttribute="leading" secondItem="dKb-0G-gf3" secondAttribute="leading" constant="15" id="0PQ-Rt-m5n"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Dt-gh-Abb" secondAttribute="bottom" constant="15" id="Yic-M9-YK9"/>
+                                                <constraint firstAttribute="trailing" secondItem="T2g-Dl-zMy" secondAttribute="trailing" constant="15" id="d35-wJ-xq5"/>
+                                                <constraint firstItem="T2g-Dl-zMy" firstAttribute="trailing" secondItem="6Dt-gh-Abb" secondAttribute="trailing" id="gYa-AT-zJm"/>
+                                                <constraint firstItem="6Dt-gh-Abb" firstAttribute="top" secondItem="T2g-Dl-zMy" secondAttribute="bottom" id="p23-tt-VHX"/>
+                                                <constraint firstItem="T2g-Dl-zMy" firstAttribute="top" secondItem="dKb-0G-gf3" secondAttribute="top" constant="15" id="y3J-LN-Wui"/>
+                                                <constraint firstItem="T2g-Dl-zMy" firstAttribute="leading" secondItem="6Dt-gh-Abb" secondAttribute="leading" id="zOg-vo-rkA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jho-xN-PcD" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jho-xN-PcD" id="F2D-JJ-0dS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-Qa-P43" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="ИИН"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="nBT-F5-UZw"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-gV-xup" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="02Q-gV-xup" secondAttribute="bottom" constant="15" id="2Ys-65-wY4"/>
+                                                <constraint firstAttribute="trailing" secondItem="Heg-Qa-P43" secondAttribute="trailing" constant="15" id="8iB-83-dwa"/>
+                                                <constraint firstItem="02Q-gV-xup" firstAttribute="leading" secondItem="Heg-Qa-P43" secondAttribute="leading" id="FBS-tj-vSM"/>
+                                                <constraint firstItem="02Q-gV-xup" firstAttribute="top" secondItem="Heg-Qa-P43" secondAttribute="bottom" id="dQd-Ek-VYm"/>
+                                                <constraint firstItem="Heg-Qa-P43" firstAttribute="top" secondItem="F2D-JJ-0dS" secondAttribute="top" constant="15" id="q9q-hi-Rr3"/>
+                                                <constraint firstItem="02Q-gV-xup" firstAttribute="trailing" secondItem="Heg-Qa-P43" secondAttribute="trailing" id="tRo-1f-w5G"/>
+                                                <constraint firstItem="Heg-Qa-P43" firstAttribute="leading" secondItem="F2D-JJ-0dS" secondAttribute="leading" constant="15" id="xjV-En-oYS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="K46-nA-oBH" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K46-nA-oBH" id="Qzs-56-5UJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRf-nZ-63D" customClass="FormDateField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Дата рождения"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="IHV-25-Mx0"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqw-0G-dAb" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JRf-nZ-63D" firstAttribute="trailing" secondItem="tqw-0G-dAb" secondAttribute="trailing" id="2QZ-lO-LzC"/>
+                                                <constraint firstItem="JRf-nZ-63D" firstAttribute="leading" secondItem="Qzs-56-5UJ" secondAttribute="leading" constant="15" id="4VQ-p9-ztD"/>
+                                                <constraint firstItem="tqw-0G-dAb" firstAttribute="top" secondItem="JRf-nZ-63D" secondAttribute="bottom" id="82Y-dU-a9w"/>
+                                                <constraint firstAttribute="trailing" secondItem="JRf-nZ-63D" secondAttribute="trailing" constant="15" id="DUz-e0-rXM"/>
+                                                <constraint firstItem="JRf-nZ-63D" firstAttribute="leading" secondItem="tqw-0G-dAb" secondAttribute="leading" id="Nr5-N4-wdC"/>
+                                                <constraint firstItem="JRf-nZ-63D" firstAttribute="top" secondItem="Qzs-56-5UJ" secondAttribute="top" constant="15" id="ebC-oa-aUu"/>
+                                                <constraint firstAttribute="bottom" secondItem="tqw-0G-dAb" secondAttribute="bottom" constant="15" id="riw-Tm-zuK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4XC-u5-Cpa" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="350" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4XC-u5-Cpa" id="496-Iv-ajc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-QU-leB" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Сумма"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="Dmb-0y-xex"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC0-te-Jvc" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T8U-QU-leB" firstAttribute="leading" secondItem="bC0-te-Jvc" secondAttribute="leading" id="1Qk-w7-dBQ"/>
+                                                <constraint firstItem="T8U-QU-leB" firstAttribute="leading" secondItem="496-Iv-ajc" secondAttribute="leading" constant="15" id="SmI-hr-rdt"/>
+                                                <constraint firstAttribute="bottom" secondItem="bC0-te-Jvc" secondAttribute="bottom" constant="15" id="TcI-Rx-vPe"/>
+                                                <constraint firstItem="bC0-te-Jvc" firstAttribute="top" secondItem="T8U-QU-leB" secondAttribute="bottom" id="W9I-z1-er0"/>
+                                                <constraint firstItem="T8U-QU-leB" firstAttribute="top" secondItem="496-Iv-ajc" secondAttribute="top" constant="15" id="Xc2-jf-6ko"/>
+                                                <constraint firstItem="T8U-QU-leB" firstAttribute="trailing" secondItem="bC0-te-Jvc" secondAttribute="trailing" id="gXJ-Jv-n0G"/>
+                                                <constraint firstAttribute="trailing" secondItem="T8U-QU-leB" secondAttribute="trailing" constant="15" id="jfd-lE-7LA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="B52-RW-YXV" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="420" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B52-RW-YXV" id="luO-gC-ZnJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ly-L5-77n" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Счет"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="uuF-Y7-Dph"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HP-C2-zpj" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Ly-L5-77n" firstAttribute="top" secondItem="luO-gC-ZnJ" secondAttribute="top" constant="15" id="2gm-5F-I2Y"/>
+                                                <constraint firstItem="2Ly-L5-77n" firstAttribute="leading" secondItem="9HP-C2-zpj" secondAttribute="leading" id="9Yi-ZK-gm0"/>
+                                                <constraint firstItem="9HP-C2-zpj" firstAttribute="top" secondItem="2Ly-L5-77n" secondAttribute="bottom" id="Mno-Jn-ym6"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Ly-L5-77n" secondAttribute="trailing" constant="15" id="bxl-nY-iUI"/>
+                                                <constraint firstAttribute="bottom" secondItem="9HP-C2-zpj" secondAttribute="bottom" constant="15" id="jhh-Wg-dJd"/>
+                                                <constraint firstItem="2Ly-L5-77n" firstAttribute="leading" secondItem="luO-gC-ZnJ" secondAttribute="leading" constant="15" id="riL-Gv-v6B"/>
+                                                <constraint firstItem="2Ly-L5-77n" firstAttribute="trailing" secondItem="9HP-C2-zpj" secondAttribute="trailing" id="rkR-dj-TCg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aOr-bs-N27" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="490" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aOr-bs-N27" id="ALg-k8-K0V">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AiJ-0t-CFI" customClass="FormTextField" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="15" width="345" height="39.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Период"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9jk-B2-L49" id="Zvd-TM-YPQ"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-gE-pvB" customClass="FormErrorLabel" customModule="ForteBusiness" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="54.5" width="345" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AiJ-0t-CFI" firstAttribute="leading" secondItem="4uf-gE-pvB" secondAttribute="leading" id="BQ3-2g-Nnd"/>
+                                                <constraint firstAttribute="bottom" secondItem="4uf-gE-pvB" secondAttribute="bottom" constant="15" id="Emx-af-c1s"/>
+                                                <constraint firstItem="AiJ-0t-CFI" firstAttribute="top" secondItem="ALg-k8-K0V" secondAttribute="top" constant="15" id="F3L-9I-RzZ"/>
+                                                <constraint firstItem="4uf-gE-pvB" firstAttribute="top" secondItem="AiJ-0t-CFI" secondAttribute="bottom" id="kSP-2e-osn"/>
+                                                <constraint firstItem="AiJ-0t-CFI" firstAttribute="leading" secondItem="ALg-k8-K0V" secondAttribute="leading" constant="15" id="tDl-ar-dkF"/>
+                                                <constraint firstAttribute="trailing" secondItem="AiJ-0t-CFI" secondAttribute="trailing" constant="15" id="wIq-fw-j0G"/>
+                                                <constraint firstItem="AiJ-0t-CFI" firstAttribute="trailing" secondItem="4uf-gE-pvB" secondAttribute="trailing" id="ydE-Qw-s1H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="iQU-pB-KVg" customClass="ShadedTableViewCell" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="560" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iQU-pB-KVg" id="q8h-Mp-N5W">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-Th-wCw">
+                                                    <rect key="frame" x="10" y="0.0" width="167.5" height="49.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="gcv-Qf-Xgc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="Отменить">
+                                                        <color key="titleColor" red="0.38823529411764707" green="0.34901960784313724" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelButtonAction:" destination="9jk-B2-L49" eventType="touchUpInside" id="Acr-IQ-Wql"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-wj-CrU">
+                                                    <rect key="frame" x="197.5" y="0.0" width="167.5" height="49.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="Сохранить">
+                                                        <color key="titleColor" red="0.098039215690000001" green="0.73333333329999995" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="saveButtonAction:" destination="9jk-B2-L49" eventType="touchUpInside" id="TgW-ls-G52"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Hvh-wj-CrU" secondAttribute="bottom" id="3XI-DB-vwd"/>
+                                                <constraint firstItem="jDa-Th-wCw" firstAttribute="leading" secondItem="q8h-Mp-N5W" secondAttribute="leading" constant="10" id="5G8-yx-LHk"/>
+                                                <constraint firstItem="jDa-Th-wCw" firstAttribute="top" secondItem="q8h-Mp-N5W" secondAttribute="top" id="7xp-RD-Qsg"/>
+                                                <constraint firstItem="Hvh-wj-CrU" firstAttribute="leading" secondItem="jDa-Th-wCw" secondAttribute="trailing" constant="20" id="G2M-7Q-T85"/>
+                                                <constraint firstItem="jDa-Th-wCw" firstAttribute="width" secondItem="Hvh-wj-CrU" secondAttribute="width" priority="999" id="G5n-54-DaZ"/>
+                                                <constraint firstItem="Hvh-wj-CrU" firstAttribute="height" secondItem="jDa-Th-wCw" secondAttribute="height" id="YKr-n3-sVY"/>
+                                                <constraint firstAttribute="bottom" secondItem="jDa-Th-wCw" secondAttribute="bottom" id="ZhR-Ux-a4F"/>
+                                                <constraint firstItem="Hvh-wj-CrU" firstAttribute="top" secondItem="q8h-Mp-N5W" secondAttribute="top" id="m6w-sQ-pZU"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hvh-wj-CrU" secondAttribute="trailing" constant="10" id="uk1-7y-37M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundedCornersStyle">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9jk-B2-L49" id="ho5-dH-CXx"/>
+                            <outlet property="delegate" destination="9jk-B2-L49" id="6kS-0X-PAW"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="accountAllertLabel" destination="9HP-C2-zpj" id="OAz-oW-6mo"/>
+                        <outlet property="accountTextField" destination="2Ly-L5-77n" id="JfJ-Q8-ecl"/>
+                        <outlet property="birthDateAllertLabel" destination="tqw-0G-dAb" id="eJn-45-ePx"/>
+                        <outlet property="birthDateTextField" destination="JRf-nZ-63D" id="dZx-hk-I38"/>
+                        <outlet property="cancelButton" destination="jDa-Th-wCw" id="Dyv-ma-3gr"/>
+                        <outlet property="middleNameAllerLabel" destination="6Dt-gh-Abb" id="Cdr-Ee-qvm"/>
+                        <outlet property="middleNameTextField" destination="T2g-Dl-zMy" id="9CB-R1-zg4"/>
+                        <outlet property="nameAllerLabel" destination="Lg7-Kw-5y1" id="2cg-c3-6Z5"/>
+                        <outlet property="nameTextField" destination="hup-av-2HH" id="aHa-QX-pcv"/>
+                        <outlet property="periodDateAllertLabel" destination="4uf-gE-pvB" id="tgW-M8-LPD"/>
+                        <outlet property="periodTextField" destination="AiJ-0t-CFI" id="sgm-9c-hCE"/>
+                        <outlet property="saveButton" destination="Hvh-wj-CrU" id="Yn2-OL-VOX"/>
+                        <outlet property="sumAllertLabel" destination="bC0-te-Jvc" id="fdm-Mt-LIz"/>
+                        <outlet property="sumTextField" destination="T8U-QU-leB" id="SrT-Fm-LRf"/>
+                        <outlet property="surnameAllertLabel" destination="8ED-Pa-ShK" id="QB2-Lq-8Ot"/>
+                        <outlet property="surnameTextField" destination="kWB-XI-tZk" id="AlR-Sl-8kG"/>
+                        <outlet property="taxCodeAllertLabel" destination="02Q-gV-xup" id="yGS-zr-QXS"/>
+                        <outlet property="taxCodeTextField" destination="Heg-Qa-P43" id="hde-oX-CDF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5Z-F8-M3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6818" y="137"/>
+        </scene>
+        <!--Domestic Transfer Fifth Page Table View Controller-->
+        <scene sceneID="oIV-vZ-13L">
+            <objects>
+                <viewController storyboardIdentifier="DomesticTransferFifthPageTableViewController" id="UAt-Tz-pPD" customClass="DomesticTransferFifthPageTableViewController" customModule="ForteBusiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V77-jq-Lv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kdw-2G-zzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DomesticTransferFifthPageRootView" id="U5f-TE-4l0" customClass="DomesticTransferFifthPageRootView" customModule="ForteBusiness" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fil-rE-Mcn" customClass="NavBar" customModule="ForteBusiness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="p0A-JI-g5W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideFilterButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Реестр"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SaB-1M-eoq" customClass="ShadedTableView" customModule="ForteBusiness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="166" width="375" height="451"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UAt-Tz-pPD" id="KE9-9J-9CQ"/>
+                                    <outlet property="delegate" destination="UAt-Tz-pPD" id="zpv-Kj-7Sf"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xod-hM-Yrj">
+                                <rect key="frame" x="0.0" y="80" width="375" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWo-wj-doh" customClass="CheckBox" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="13" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="d2j-ly-bFe"/>
+                                            <constraint firstAttribute="width" constant="20" id="eJO-4F-py9"/>
+                                        </constraints>
+                                        <state key="normal" image="empty-circle"/>
+                                        <connections>
+                                            <action selector="markAllAction:" destination="UAt-Tz-pPD" eventType="touchUpInside" id="dwm-1n-b8U"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВСЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-ZA-bC7">
+                                        <rect key="frame" x="49" y="14.5" width="28.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                        <color key="textColor" red="0.31764705882352939" green="0.27843137254901962" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СОХР." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q79-eZ-Kpd">
+                                        <rect key="frame" x="129.5" y="14" width="40" height="16"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                        <color key="textColor" red="0.31764705882352939" green="0.27843137254901962" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8z-yl-2L5" customClass="CheckBox" customModule="ForteBusiness" customModuleProvider="target">
+                                        <rect key="frame" x="101.5" y="13" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="4R0-Jp-Wdl"/>
+                                            <constraint firstAttribute="width" constant="20" id="icK-EF-Yhf"/>
+                                        </constraints>
+                                        <state key="normal" image="empty-circle"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5V-GT-TJ4">
+                                        <rect key="frame" x="267" y="0.5" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="DPC-Bx-7mr"/>
+                                            <constraint firstAttribute="height" constant="46" id="KrJ-uC-ULg"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="9"/>
+                                        <state key="normal" image="trash"/>
+                                        <connections>
+                                            <action selector="deleteAction:" destination="UAt-Tz-pPD" eventType="touchUpInside" id="9X6-rs-hSM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnQ-h8-atP">
+                                        <rect key="frame" x="321" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="RDp-mf-aS6"/>
+                                            <constraint firstAttribute="width" constant="46" id="gXB-sQ-NeT"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="11" minY="19" maxX="11" maxY="20"/>
+                                        <state key="normal" title="Button" image="menu_dot"/>
+                                        <connections>
+                                            <action selector="showDropDownAction:" destination="UAt-Tz-pPD" eventType="touchUpInside" id="LMI-GY-0ef"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.94509803921568625" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="19Y-vw-ycH"/>
+                                    <constraint firstItem="BVb-ZA-bC7" firstAttribute="leading" secondItem="CWo-wj-doh" secondAttribute="trailing" constant="8" id="1Hh-l5-Zfq"/>
+                                    <constraint firstItem="V8z-yl-2L5" firstAttribute="centerY" secondItem="xod-hM-Yrj" secondAttribute="centerY" id="3qd-Np-wd3"/>
+                                    <constraint firstAttribute="trailing" secondItem="NnQ-h8-atP" secondAttribute="trailing" constant="8" id="9WT-DE-ihw"/>
+                                    <constraint firstItem="NnQ-h8-atP" firstAttribute="leading" secondItem="L5V-GT-TJ4" secondAttribute="trailing" constant="8" id="9dQ-dF-PZB"/>
+                                    <constraint firstItem="NnQ-h8-atP" firstAttribute="centerY" secondItem="xod-hM-Yrj" secondAttribute="centerY" id="Ak5-Sv-SAQ"/>
+                                    <constraint firstItem="BVb-ZA-bC7" firstAttribute="centerY" secondItem="CWo-wj-doh" secondAttribute="centerY" constant="-1" id="XbR-53-dgn"/>
+                                    <constraint firstItem="CWo-wj-doh" firstAttribute="leading" secondItem="xod-hM-Yrj" secondAttribute="leading" constant="21" id="anq-A3-Nv2"/>
+                                    <constraint firstItem="L5V-GT-TJ4" firstAttribute="centerY" secondItem="xod-hM-Yrj" secondAttribute="centerY" id="hvn-zb-9fI"/>
+                                    <constraint firstItem="V8z-yl-2L5" firstAttribute="leading" secondItem="BVb-ZA-bC7" secondAttribute="trailing" constant="24" id="mOX-n5-b1V"/>
+                                    <constraint firstItem="Q79-eZ-Kpd" firstAttribute="centerY" secondItem="V8z-yl-2L5" secondAttribute="centerY" constant="-1" id="nzO-vw-jyG"/>
+                                    <constraint firstItem="Q79-eZ-Kpd" firstAttribute="leading" secondItem="V8z-yl-2L5" secondAttribute="trailing" constant="8" id="qwV-pZ-Px7"/>
+                                    <constraint firstItem="CWo-wj-doh" firstAttribute="centerY" secondItem="xod-hM-Yrj" secondAttribute="centerY" id="rwX-Ml-nGM"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nb-NP-mgS">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gh-WT-VEa">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" red="0.38823529411764707" green="0.34901960784313724" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="UAt-Tz-pPD" eventType="touchUpInside" id="vLb-ev-Y18"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB0-BY-44A">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Сохранить">
+                                            <color key="titleColor" red="0.098039215690000001" green="0.73333333329999995" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveAction:" destination="UAt-Tz-pPD" eventType="touchUpInside" id="QQC-BM-gFU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2Gh-WT-VEa" firstAttribute="leading" secondItem="9nb-NP-mgS" secondAttribute="leading" id="GxR-Ij-zQ2"/>
+                                    <constraint firstItem="2Gh-WT-VEa" firstAttribute="width" secondItem="9nb-NP-mgS" secondAttribute="width" multiplier="0.5" id="OeW-dT-lJh"/>
+                                    <constraint firstItem="GB0-BY-44A" firstAttribute="top" secondItem="9nb-NP-mgS" secondAttribute="top" id="c54-ng-iT7"/>
+                                    <constraint firstAttribute="bottom" secondItem="GB0-BY-44A" secondAttribute="bottom" id="juQ-Op-m2Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Gh-WT-VEa" secondAttribute="bottom" id="kY4-id-Yeu"/>
+                                    <constraint firstItem="GB0-BY-44A" firstAttribute="width" secondItem="9nb-NP-mgS" secondAttribute="width" multiplier="0.5" id="nBC-De-CF7"/>
+                                    <constraint firstAttribute="height" constant="50" id="p2s-Ui-2ix"/>
+                                    <constraint firstItem="2Gh-WT-VEa" firstAttribute="top" secondItem="9nb-NP-mgS" secondAttribute="top" id="vaV-zj-sqX"/>
+                                    <constraint firstAttribute="trailing" secondItem="GB0-BY-44A" secondAttribute="trailing" id="vv2-cs-VIe"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="NCH-jI-Hm6">
+                                <rect key="frame" x="0.0" y="126" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kHj-nX-i5y"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.94509803921568625" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xod-hM-Yrj" secondAttribute="trailing" id="0jm-4k-6YQ"/>
+                            <constraint firstAttribute="trailing" secondItem="9nb-NP-mgS" secondAttribute="trailing" id="24i-8d-o2m"/>
+                            <constraint firstItem="NCH-jI-Hm6" firstAttribute="leading" secondItem="U5f-TE-4l0" secondAttribute="leading" id="3k5-A6-GhI"/>
+                            <constraint firstItem="NCH-jI-Hm6" firstAttribute="top" secondItem="xod-hM-Yrj" secondAttribute="bottom" id="5MA-lh-QZr"/>
+                            <constraint firstItem="SaB-1M-eoq" firstAttribute="leading" secondItem="U5f-TE-4l0" secondAttribute="leading" id="6EK-t2-uGg"/>
+                            <constraint firstItem="xod-hM-Yrj" firstAttribute="leading" secondItem="U5f-TE-4l0" secondAttribute="leading" id="H52-Dh-4i9"/>
+                            <constraint firstAttribute="trailing" secondItem="fil-rE-Mcn" secondAttribute="trailing" id="Hkg-mI-dw8"/>
+                            <constraint firstItem="SaB-1M-eoq" firstAttribute="top" secondItem="NCH-jI-Hm6" secondAttribute="bottom" id="IAy-2e-HoY"/>
+                            <constraint firstItem="fil-rE-Mcn" firstAttribute="leading" secondItem="U5f-TE-4l0" secondAttribute="leading" id="Nfr-ef-6E9"/>
+                            <constraint firstItem="9nb-NP-mgS" firstAttribute="top" secondItem="SaB-1M-eoq" secondAttribute="bottom" id="OJX-eX-FfK"/>
+                            <constraint firstAttribute="trailing" secondItem="SaB-1M-eoq" secondAttribute="trailing" id="VNi-Z9-KQE"/>
+                            <constraint firstItem="fil-rE-Mcn" firstAttribute="top" secondItem="U5f-TE-4l0" secondAttribute="top" id="WtJ-yS-5gq"/>
+                            <constraint firstAttribute="trailing" secondItem="NCH-jI-Hm6" secondAttribute="trailing" id="Yvc-Wd-YjI"/>
+                            <constraint firstItem="Kdw-2G-zzf" firstAttribute="top" secondItem="9nb-NP-mgS" secondAttribute="bottom" id="eN3-I4-gGz"/>
+                            <constraint firstItem="xod-hM-Yrj" firstAttribute="top" secondItem="fil-rE-Mcn" secondAttribute="bottom" id="kuv-xb-I1w"/>
+                            <constraint firstItem="9nb-NP-mgS" firstAttribute="leading" secondItem="U5f-TE-4l0" secondAttribute="leading" id="viN-0d-VC4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="NnQ-h8-atP" id="lfZ-8a-fTZ"/>
+                        <outlet property="bottomLayoutContraint" destination="eN3-I4-gGz" id="gjg-bg-dP5"/>
+                        <outlet property="bottomToolbarHeightContraint" destination="p2s-Ui-2ix" id="Rgy-1u-beJ"/>
+                        <outlet property="deleteButton" destination="L5V-GT-TJ4" id="MJG-F1-d6R"/>
+                        <outlet property="markAllButton" destination="CWo-wj-doh" id="MgE-19-lMN"/>
+                        <outlet property="navBar" destination="fil-rE-Mcn" id="Jkb-07-FyI"/>
+                        <outlet property="saveWorkerkButton" destination="V8z-yl-2L5" id="CIn-mZ-4Pz"/>
+                        <outlet property="searchBar" destination="NCH-jI-Hm6" id="qWl-ge-GRL"/>
+                        <outlet property="tableView" destination="SaB-1M-eoq" id="YmR-5O-DVn"/>
+                        <segue destination="9jk-B2-L49" kind="show" identifier="CreateEmployeeModalTableViewController" id="ZiR-N0-U9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK0-Ww-gjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5992.8000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty-circle" width="16" height="16"/>
+        <image name="menu_dot" width="60" height="16"/>
+        <image name="trash" width="57" height="75"/>
+    </resources>
+</document>

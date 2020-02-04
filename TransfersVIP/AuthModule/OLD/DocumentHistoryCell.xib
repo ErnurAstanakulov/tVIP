@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentHistoryCell" customModule="ForteBusiness" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentHistoryCell" rowHeight="105" id="W2c-yP-3Ba" customClass="DocumentHistoryCell" customModule="ForteBusiness" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2c-yP-3Ba" id="RoQ-ia-nTz">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="903" text="Иван Иванович Иванов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6Y-Yn-lnH">
+                        <rect key="frame" x="13" y="14" width="274" height="27"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                        <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" verticalCompressionResistancePriority="902" text="from" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8M-Gu-xcB">
+                        <rect key="frame" x="13" y="49" width="172" height="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" red="0.54117647059999996" green="0.5450980392" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" verticalCompressionResistancePriority="902" text="to" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz7-3Y-ZJK">
+                        <rect key="frame" x="229" y="49" width="172" height="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" red="0.54117647059999996" green="0.5450980392" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="01.01.1970 01:01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-Ep-f3c">
+                        <rect key="frame" x="300" y="16.5" width="101" height="15"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+                        <color key="textColor" red="0.54117647059999996" green="0.5450980392" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-xB-zTh">
+                        <rect key="frame" x="195" y="51.5" width="24" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="2fd-zR-PJZ"/>
+                            <constraint firstAttribute="height" constant="12" id="qbx-jm-Pmf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="900" verticalCompressionResistancePriority="901" text="message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2y-D0-kDa">
+                        <rect key="frame" x="13" y="74" width="388" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.54117647059999996" green="0.5450980392" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hC9-Ep-f3c" secondAttribute="trailing" constant="13" id="75h-PI-QJN"/>
+                    <constraint firstItem="nz7-3Y-ZJK" firstAttribute="height" secondItem="O8M-Gu-xcB" secondAttribute="height" id="CAe-1j-0av"/>
+                    <constraint firstItem="G6Y-Yn-lnH" firstAttribute="leading" secondItem="RoQ-ia-nTz" secondAttribute="leading" constant="13" id="IMp-Cy-ArY"/>
+                    <constraint firstItem="nz7-3Y-ZJK" firstAttribute="top" secondItem="O8M-Gu-xcB" secondAttribute="top" id="JuM-aV-TBW"/>
+                    <constraint firstItem="R2y-D0-kDa" firstAttribute="leading" secondItem="G6Y-Yn-lnH" secondAttribute="leading" id="Nwt-WV-XEA"/>
+                    <constraint firstItem="g1P-xB-zTh" firstAttribute="leading" secondItem="O8M-Gu-xcB" secondAttribute="trailing" constant="10" id="PP1-as-She"/>
+                    <constraint firstAttribute="bottom" secondItem="R2y-D0-kDa" secondAttribute="bottom" constant="14" id="ZMi-pJ-s1h"/>
+                    <constraint firstItem="nz7-3Y-ZJK" firstAttribute="leading" secondItem="g1P-xB-zTh" secondAttribute="trailing" constant="10" id="gVy-ON-1Bl"/>
+                    <constraint firstItem="nz7-3Y-ZJK" firstAttribute="width" secondItem="O8M-Gu-xcB" secondAttribute="width" id="nU0-5U-RvC"/>
+                    <constraint firstItem="hC9-Ep-f3c" firstAttribute="leading" secondItem="G6Y-Yn-lnH" secondAttribute="trailing" constant="13" id="o3d-hJ-wsu"/>
+                    <constraint firstItem="g1P-xB-zTh" firstAttribute="centerY" secondItem="O8M-Gu-xcB" secondAttribute="centerY" id="oeM-7d-2Sd"/>
+                    <constraint firstItem="nz7-3Y-ZJK" firstAttribute="trailing" secondItem="R2y-D0-kDa" secondAttribute="trailing" id="qFQ-kQ-BaC"/>
+                    <constraint firstItem="G6Y-Yn-lnH" firstAttribute="top" secondItem="RoQ-ia-nTz" secondAttribute="top" constant="14" id="rIM-PI-Saz"/>
+                    <constraint firstItem="O8M-Gu-xcB" firstAttribute="leading" secondItem="G6Y-Yn-lnH" secondAttribute="leading" id="rLh-mT-AYa"/>
+                    <constraint firstItem="R2y-D0-kDa" firstAttribute="top" secondItem="O8M-Gu-xcB" secondAttribute="bottom" constant="8" id="rq1-Hs-h6o"/>
+                    <constraint firstItem="hC9-Ep-f3c" firstAttribute="firstBaseline" secondItem="G6Y-Yn-lnH" secondAttribute="firstBaseline" id="tBW-Mv-F6I"/>
+                    <constraint firstItem="hC9-Ep-f3c" firstAttribute="trailing" secondItem="R2y-D0-kDa" secondAttribute="trailing" id="tPf-wU-gnG"/>
+                    <constraint firstItem="O8M-Gu-xcB" firstAttribute="top" secondItem="G6Y-Yn-lnH" secondAttribute="bottom" constant="8" id="zam-h3-8q0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="roundedCornersStyle">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="arrowImageView" destination="g1P-xB-zTh" id="95u-DG-Iwf"/>
+                <outlet property="dateLabel" destination="hC9-Ep-f3c" id="tRq-h7-Xam"/>
+                <outlet property="descriptionLabel" destination="R2y-D0-kDa" id="pyb-L4-gzm"/>
+                <outlet property="fromStateLabel" destination="O8M-Gu-xcB" id="OYD-gl-YNT"/>
+                <outlet property="nameLabel" destination="G6Y-Yn-lnH" id="ZyA-5R-94b"/>
+                <outlet property="toStateLabel" destination="nz7-3Y-ZJK" id="wlG-mB-dXf"/>
+            </connections>
+            <point key="canvasLocation" x="-4" y="142.5"/>
+        </tableViewCell>
+    </objects>
+</document>
